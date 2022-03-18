@@ -70,7 +70,7 @@ def create_app(test_config=None):
     def index():
         return 'Index'
 
-    @app.route('log_out', methods=('GET', 'POST'))
+    @app.route('/log_out', methods=('GET', 'DELETE'))
     def log_out():
         session.clear()
         flash('Successfuly logged out.', 'success')
